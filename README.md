@@ -23,6 +23,12 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . -j4
 ```
 
+To build tests add this to cmake call
+
+```bash
+-DUNI_TEST=ON
+```
+
 ## Run
 
 Run the app
