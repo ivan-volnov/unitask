@@ -13,6 +13,8 @@ TEST_CASE("uni::SpecialId")
 
     id = "A9";
     CHECK(id.to_string() == "A9");
+    CHECK_THROWS(id = "");
+    CHECK(id.to_string() == "A9");
     ++id;
     CHECK(id.to_string() == "B1");
 
@@ -30,6 +32,8 @@ TEST_CASE("uni::SpecialId")
     CHECK(id.to_string() == "A2-A1");
 
     id = "Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9";
+    CHECK(id.to_string() == "Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9");
+    CHECK_THROWS(id = "A2-WrongID");
     CHECK(id.to_string() == "Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9");
     ++id;
     CHECK(id.to_string() == "A1");
