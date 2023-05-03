@@ -3,8 +3,6 @@
 
 #include <array>
 #include <cassert>
-// TODO: Test for thread safety
-#include <mutex>
 #include <string>
 
 namespace uni {
@@ -64,7 +62,6 @@ public:
         return assign(sv);
     }
 
-    // TODO: Test the constexpr function is compilling on old C++17
     constexpr SpecialId &assign(std::string_view sv)
     {
         static_assert(Sequence.size() == MaxValue * 2);
