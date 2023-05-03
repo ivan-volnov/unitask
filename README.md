@@ -22,3 +22,17 @@ mkdir build; cd build/
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . -j4
 ```
+
+## Run
+
+Run the app
+
+```bash
+./unitask
+```
+
+Run unit tests
+
+```bash
+./test/test_unitask
+```
